@@ -198,10 +198,7 @@ namespace Meridian59 { namespace Ogre
 
          // set color and name
          name->setProperty(UI_PROPNAME_NORMALTEXTCOLOUR, ::CEGUI::PropertyHelper<::CEGUI::Colour>::toString(color));
-         ::CEGUI::String objName = StringConvert::CLRToCEGUI(obj->Name);
-         if (obj->Flags->IsEquipped)
-            objName.append(GetLangMisc(LANGSTR_MISC::EQUIPPED));
-         name->setText(objName);
+         name->setText(StringConvert::CLRToCEGUI(obj->Name));
 
          // set default amount
          amount->setText(CEGUI::PropertyHelper<unsigned int>::toString(obj->Count));
@@ -290,10 +287,7 @@ namespace Meridian59 { namespace Ogre
 
          // set color and name
          name->setProperty(UI_PROPNAME_NORMALTEXTCOLOUR, ::CEGUI::PropertyHelper<::CEGUI::Colour>::toString(color));
-         ::CEGUI::String objName = StringConvert::CLRToCEGUI(obj->Name);
-         if (obj->Flags->IsEquipped)
-            objName.append(GetLangMisc(LANGSTR_MISC::EQUIPPED));
-         name->setText(objName);
+         name->setText(StringConvert::CLRToCEGUI(obj->Name));
 
          // set default amount
          amount->setText(CEGUI::PropertyHelper<unsigned int>::toString(obj->Count));

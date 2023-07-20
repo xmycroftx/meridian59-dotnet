@@ -115,23 +115,6 @@ const char* EN_NPCQUESTUI[] =
    "Requirements text boxes to switch to 'copy' mode where text can be copied from the box. "                  // 7
 };
 
-const char* EN_MISC[] =
-{
-   " (in use)"  // 0
-};
-
-const char* EN_TOOLTIPS_TARGET[] =
-{
-   "Inspect",   // 0
-   "Attack",    // 1
-   "Activate",  // 2
-   "Items",     // 3
-   "Buy",       // 4
-   "Trade",     // 5
-   "Loot",      // 6
-   "Quest"      // 7
-};
-
 /**************************************************************************************/
 /***************************      GERMAN      *****************************************/
 /**************************************************************************************/
@@ -261,23 +244,6 @@ const char* DE_NPCQUESTUI[] =
    "den 'Kopier-Modus' und hast die Möglichkeit, diese zu Kopieren."    // 7
 };
 
-const char* DE_MISC[] =
-{
-   " (in Benutzung)"  // 0
-};
-
-const char* DE_TOOLTIPS_TARGET[] =
-{
-   "Inspizieren", // 0
-   "Angreifen",   // 1
-   "Aktivieren",  // 2
-   "Gegenstände", // 3
-   "Kaufen",      // 4
-   "Anbieten",    // 5
-   "Aufheben",    // 6
-   "Auftrag"      // 7
-};
-
 /**************************************************************************************/
 /**************************************************************************************/
 
@@ -386,29 +352,5 @@ const char* GetLangNPCQuestUI(const LANGSTR_NPCQUESTUI::Enum ID)
    {
    case LanguageCode::German: return DE_NPCQUESTUI[ID];
    default:                   return EN_NPCQUESTUI[ID];
-   }
-};
-
-const char* GetLangMisc(const LANGSTR_MISC::Enum ID)
-{
-   using ::Meridian59::Ogre::OgreClient;
-   using ::Meridian59::Common::Enums::LanguageCode;
-
-   switch (OgreClient::Singleton->Config->Language)
-   {
-   case LanguageCode::German: return DE_MISC[ID];
-   default:                   return EN_MISC[ID];
-   }
-};
-
-const char* GetLangTooltipTarget(const LANGSTR_TOOLTIP_TARGET::Enum ID)
-{
-   using ::Meridian59::Ogre::OgreClient;
-   using ::Meridian59::Common::Enums::LanguageCode;
-
-   switch (OgreClient::Singleton->Config->Language)
-   {
-   case LanguageCode::German: return DE_TOOLTIPS_TARGET[ID];
-   default:                   return EN_TOOLTIPS_TARGET[ID];
    }
 };

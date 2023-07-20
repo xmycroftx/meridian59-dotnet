@@ -1025,6 +1025,7 @@ namespace Meridian59.Data
             ClickedTargets.Clear();
 
             // clear single data models
+            Effects.Clear(true);
             GuildInfo.Clear(true);
             GuildAskData.Clear(true);
             DiplomacyInfo.Clear(true);
